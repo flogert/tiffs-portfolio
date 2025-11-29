@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# Tiff's Coffee Bar ☕✨
 
-## Project info
+A modern, cozy, and immersive portfolio website for **Tiff's Coffee Bar**, where comfort meets coffee. This project features a unique blend of warm coffee aesthetics and a whimsical space-themed preloader, built with high-performance web technologies.
 
-**URL**: https://lovable.dev/projects/f1c9bf80-5f43-44a5-a094-3268a780214e
+![Tiff's Coffee Bar Hero](src/assets/hero-cafe.jpg)
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+*   **Immersive Experience**:
+    *   **Custom Preloader**: A unique "Space Coffee" loading animation featuring a self-drawing mug, rising steam, and a background of drifting stars, nebulas, and planets.
+    *   **Smooth Animations**: Powered by `framer-motion` for scroll reveals, text effects, and interactive elements.
+*   **Interactive Menu**:
+    *   Tabbed interface for switching between "Coffee" and "Specialty" drinks.
+    *   "Gooey" filter effects on tab switching.
+    *   Hover effects on menu items.
+*   **Gallery**:
+    *   Responsive grid layout.
+    *   Lightbox modal for viewing full-size images.
+*   **Locations & Contact**:
+    *   Interactive map integration.
+    *   Embedded Google Form for community engagement.
+    *   Schedule view with calendar integration.
+*   **Performance & Accessibility**:
+    *   **Lazy Loading**: Images and components are lazy-loaded to speed up initial render.
+    *   **Accessibility (a11y)**: Semantic HTML, ARIA roles, and keyboard navigation support.
+    *   **Responsive**: Fully optimized for mobile, tablet, and desktop devices.
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f1c9bf80-5f43-44a5-a094-3268a780214e) and start prompting.
+*   **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+*   **Language**: [TypeScript](https://www.typescriptlang.org/)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+*   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+*   **Routing**: [React Router](https://reactrouter.com/) (HashRouter for GitHub Pages)
+*   **Icons**: [Lucide React](https://lucide.dev/)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Getting Started
 
-**Use your preferred IDE**
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/flogert/tiffs-portfolio.git
+    cd tiffs-portfolio
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
 
-Follow these steps:
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🌍 Deployment
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+This project is configured for deployment on **GitHub Pages**.
 
-# Step 3: Install the necessary dependencies.
-npm i
+1.  The `vite.config.ts` is set with `base: "/tiffs-portfolio/"`.
+2.  Routing uses `HashRouter` to ensure compatibility with static hosting.
+3.  To deploy, simply push to the `main` branch (if a workflow is set up) or run the build command and deploy the `dist` folder.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🎨 Credits
 
-**Edit a file directly in GitHub**
+*   Designed and developed for Tiff's Coffee Bar.
+*   Images sourced from local assets.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f1c9bf80-5f43-44a5-a094-3268a780214e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+*Where coffee sparks conversation and community feels like home.*
