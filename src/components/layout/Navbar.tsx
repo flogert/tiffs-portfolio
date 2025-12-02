@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import tiffsLogo from "@/assets/Tiffs.png";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -137,7 +138,7 @@ export const Navbar = () => {
             className="flex items-center gap-3"
           >
             <img
-              src="/Tiffs.png"
+              src={tiffsLogo}
               alt="Tiff's Coffee Bar Logo"
               className={`w-auto invert rounded-lg transition-all duration-500 ease-in-out ${
                 scrolled ? "h-12 md:h-16" : "h-16 md:h-24"

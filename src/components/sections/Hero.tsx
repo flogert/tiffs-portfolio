@@ -27,7 +27,7 @@ export const Hero = () => {
           className="group relative cursor-pointer"
           aria-label="View Menu"
         >
-          <div className="relative w-[4.2rem] h-[4.2rem] rounded-full border-2 border-gold/60 flex items-center justify-center backdrop-blur-sm bg-black/10 group-hover:bg-black/20 transition-all duration-[1500ms] group-hover:scale-150 animate-pulse-glow">
+          <div className="relative w-[4.2rem] h-[4.2rem] rounded-full border-2 border-gold/60 flex items-center justify-center backdrop-blur-sm bg-black/10 group-hover:bg-black/20 transition-all duration-1000 group-hover:scale-150 animate-pulse-glow">
             <span className="text-gold font-serif font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Menu</span>
           </div>
         </button>

@@ -1,6 +1,7 @@
 import { Instagram } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
+import tiffsLogo from "@/assets/Tiffs.png";
 
 export const Footer = () => {
   return (
@@ -12,7 +13,7 @@ export const Footer = () => {
             className="flex items-center gap-4 hover:opacity-80 transition-opacity cursor-pointer"
           >
             <img
-              src="/Tiffs.png"
+              src={tiffsLogo}
               alt="Tiff's Coffee Bar Logo"
               className="h-16 w-auto invert rounded-lg opacity-90"
             />
