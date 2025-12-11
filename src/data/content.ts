@@ -81,7 +81,7 @@ export const schedule = [
     status: "upcoming",
   },
   {
-    date: new Date(2025, 12, 15), // Nov 24, 2025
+    date: new Date(2025, 11, 15), // Dec 15, 2025
     location: "Lititz Library",
     time: "10:00 - 14:00",
     status: "upcoming",
