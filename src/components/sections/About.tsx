@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedText } from "@/components/AnimatedText";
 import profile from "@/assets/profile.jpg";
-import cafeInterior from "@/assets/cafe-interior.jpg";
-import { motion } from "framer-motion";
 
 export const About = () => {
   const scrollToSection = (id: string) => {
@@ -15,96 +13,15 @@ export const About = () => {
 
   return (
     <section id="about" className="py-12 md:py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-[300px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl group">
-            <motion.div
-              initial={{ scale: 1.2 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="w-full h-full"
-            >
-              <img
-                src={profile}
-                alt="Tiff's Profile"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </motion.div>
-            
-            {/* Staggered Column Reveal */}
-            <div className="absolute inset-0 z-20 grid grid-cols-10">
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.25, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.45, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.15, ease: [0.22, 1, 0.36, 1], delay: 0.06 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.35, ease: [0.22, 1, 0.36, 1], delay: 0.14 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-              <motion.div
-                initial={{ height: "100%" }}
-                whileInView={{ height: "0%" }}
-                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.04 }}
-                viewport={{ once: true }}
-                className="bg-gold w-full relative rounded-b-xl"
-              />
-            </div>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="relative w-full h-[280px] sm:h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl group">
+            <img
+              src={profile}
+              alt="Tiff - Owner of Tiff's Coffee Bar in Lititz PA"
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
           <AnimatedSection animation="fade-left" delay={200}>
             <AnimatedText 

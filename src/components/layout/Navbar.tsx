@@ -127,29 +127,49 @@ export const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-sm shadow-sm py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between min-[845px]:justify-between">
+          {/* Mobile Menu Button - Left */}
+          <div className="min-[845px]:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className={scrolled ? "text-primary" : "text-white"}>
+                  <Menu size={28} />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[280px] sm:w-[350px] bg-background/95 backdrop-blur-xl">
+                <div className="flex flex-col mt-8">
+                  {NavItems({ mobile: true })}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+
+          {/* Logo - Centered on mobile */}
           <a
             href="#"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex items-center gap-1.5"
+            className="flex items-center gap-2 min-[845px]:gap-3 absolute left-1/2 -translate-x-1/2 min-[845px]:static min-[845px]:translate-x-0"
           >
             <img
               src={tiffsLogo}
-              alt="Tiff's Coffee Bar Logo"
-              className={`w-auto rounded-lg transition-all ml-12 duration-500 ease-in-out ${
-                scrolled ? "h-16 md:h-24" : "h-24 md:h-32"
+              alt="Tiff's Coffee Bar - Best Coffee in Lititz Lancaster County PA"
+              className={`w-auto rounded-lg transition-all duration-500 ease-in-out ${
+                scrolled ? "h-14 md:h-20" : "h-20 md:h-28"
               } ${scrolled ? "" : "invert"}`}
             />
-            <h1 className={`text-xl md:text-[1.72rem] font-serif font-bold transition-all duration-500 ease-in-out ${
+            <h1 className={`text-sm sm:text-lg md:text-[1.72rem] font-serif font-bold transition-all duration-500 ease-in-out ${
               scrolled ? "text-primary" : "text-white"
             }`}>
               Tiff's Coffee Bar
             </h1>
           </a>
+
+          {/* Spacer for mobile to balance the layout */}
+          <div className="w-10 min-[845px]:hidden" />
 
           {/* Desktop Menu */}
           <div className="hidden min-[845px]:flex items-center gap-2 relative">
@@ -164,22 +184,6 @@ export const Navbar = () => {
             >
               <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[4px] border-b-gold filter drop-shadow-[0_0_2px_#d4af37]"></div>
             </div>
-          </div>
-
-          {/* Mobile Menu */}
-          <div className="min-[845px]:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={scrolled ? "text-primary" : "text-white"}>
-                  <Menu size={24} />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background/95 backdrop-blur-xl">
-                <div className="flex flex-col mt-8">
-                  {NavItems({ mobile: true })}
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </div>
