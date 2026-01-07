@@ -14,10 +14,13 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
-        style={{ backgroundImage: `url(${heroImage})` }}
+    <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image as img element for better mobile performance */}
+      <img 
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       
       {/* Interactive Menu Highlight */}
