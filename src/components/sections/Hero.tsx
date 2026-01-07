@@ -16,7 +16,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
