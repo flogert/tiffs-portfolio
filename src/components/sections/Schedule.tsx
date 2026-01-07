@@ -51,7 +51,7 @@ export const Schedule = () => {
         <AnimatedSection animation="fade-up">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-cozy font-bold text-primary mb-4 tracking-wide">
-              Find Us & Schedule
+              Schedule & Event Bookings
             </h2>
           </div>
         </AnimatedSection>

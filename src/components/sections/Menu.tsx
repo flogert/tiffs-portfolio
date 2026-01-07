@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export const Menu = () => {
   const [isHighlighted, setIsHighlighted] = useState(false);
-  const [activeTab, setActiveTab] = useState("coffee");
+  const [activeTab, setActiveTab] = useState("drinks");
 
   useEffect(() => {
     const handleHighlight = () => {
@@ -59,14 +59,14 @@ export const Menu = () => {
                    <div className="relative w-full h-full grid grid-cols-2 gap-2">
                       {/* This is a dummy element to maintain grid layout for the absolute pill */}
                       <div className="col-span-2 relative h-full">
-                         {activeTab === "coffee" && (
+                         {activeTab === "drinks" && (
                             <motion.div
                               layoutId="active-pill"
                               className="absolute left-0 top-0 bottom-0 w-1/2 bg-coffee rounded-lg shadow-md"
                               transition={{ type: "spring", stiffness: 300, damping: 20 }}
                             />
                          )}
-                         {activeTab === "specialty" && (
+                         {activeTab === "flavors" && (
                             <motion.div
                               layoutId="active-pill"
                               className="absolute right-0 top-0 bottom-0 w-1/2 bg-gold rounded-lg shadow-md"
@@ -81,23 +81,23 @@ export const Menu = () => {
                 <div className="relative z-10 grid w-full grid-cols-2 gap-2" role="tablist" aria-label="Menu Categories">
                   <button
                     role="tab"
-                    aria-selected={activeTab === "coffee"}
-                    onClick={() => setActiveTab("coffee")}
+                    aria-selected={activeTab === "drinks"}
+                    onClick={() => setActiveTab("drinks")}
                     className={`font-serif text-lg py-2 rounded-lg transition-colors duration-300 ${
-                      activeTab === "coffee" ? "text-cream" : "text-coffee hover:bg-coffee/10"
+                      activeTab === "drinks" ? "text-cream" : "text-coffee hover:bg-coffee/10"
                     }`}
                   >
-                    Coffee
+                    Drinks
                   </button>
                   <button
                     role="tab"
-                    aria-selected={activeTab === "specialty"}
-                    onClick={() => setActiveTab("specialty")}
+                    aria-selected={activeTab === "flavors"}
+                    onClick={() => setActiveTab("flavors")}
                     className={`font-serif text-lg py-2 rounded-lg transition-colors duration-300 ${
-                      activeTab === "specialty" ? "text-coffee" : "text-coffee hover:bg-gold/10"
+                      activeTab === "flavors" ? "text-coffee" : "text-coffee hover:bg-gold/10"
                     }`}
                   >
-                    Specialty
+                    Flavors
                   </button>
                 </div>
               </div>

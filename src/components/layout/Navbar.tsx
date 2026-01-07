@@ -135,14 +135,14 @@ export const Navbar = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-1.5"
           >
             <img
               src={tiffsLogo}
               alt="Tiff's Coffee Bar Logo"
-              className={`w-auto invert rounded-lg transition-all duration-500 ease-in-out ${
-                scrolled ? "h-12 md:h-16" : "h-16 md:h-24"
-              }`}
+              className={`w-auto rounded-lg transition-all ml-12 duration-500 ease-in-out ${
+                scrolled ? "h-16 md:h-24" : "h-24 md:h-32"
+              } ${scrolled ? "" : "invert"}`}
             />
             <h1 className={`text-xl md:text-[1.72rem] font-serif font-bold transition-all duration-500 ease-in-out ${
               scrolled ? "text-primary" : "text-white"

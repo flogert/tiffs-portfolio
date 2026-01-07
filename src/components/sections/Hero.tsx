@@ -42,7 +42,7 @@ export const Hero = () => {
         </AnimatedSection>
         <div className="min-h-[3rem]">
           <AnimatedText
-            text='"Where coffee sparks conversation and community feels like home"'
+            text="Where quality coffee meets genuine connection"
             className="text-lg md:text-2xl text-cream/90 font-light italic"
             delay={300}
           />

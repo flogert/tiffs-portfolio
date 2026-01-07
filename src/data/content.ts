@@ -1,21 +1,31 @@
 import heroImage from "@/assets/hero-cafe.jpg";
-import coffeeLatte from "@/assets/coffee-latte.jpg";
-import cafeInterior from "@/assets/cafe-interior.jpg";
-import pastries from "@/assets/pastries.jpg";
+import gallery1 from "@/assets/gallery-1.png";
+import gallery2 from "@/assets/gallery-2.png";
+import gallery3 from "@/assets/gallery-3.png";
+import gallery4 from "@/assets/gallery-4.png";
+import gallery5 from "@/assets/gallery-5.png";
+import gallery6 from "@/assets/gallery-6.png";
 import profile from "@/assets/profile.jpg";
 
 export const menuItems = {
-  coffee: [
-    { name: "Espresso", price: "$3.00", description: "Rich and bold single shot" },
-    { name: "Latte", price: "$4.50", description: "Espresso with steamed milk and light foam" },
-    { name: "Cappuccino", price: "$4.50", description: "Espresso with steamed milk and thick foam" },
-    { name: "Flat White", price: "$4.25", description: "Double espresso with microfoam" },
-    { name: "Mocha", price: "$5.00", description: "Espresso with chocolate and steamed milk" },
+  drinks: [
+    { name: "Espresso", price: "$2.00", description: "Double Shot" },
+    { name: "Americano", price: "$3.00", description: "Double Shot Espresso, Water" },
+    { name: "Cortado", price: "$4.00", description: "Espresso, Steamed Milk (8oz.)" },
+    { name: "Cappuccino", price: "$5.00", description: "Espresso, Steamed Milk, Foam (12oz.)" },
+    { name: "Latte", price: "$5.50 / $6.00", description: "Espresso, Steamed Milk, Flavor of Choice (12oz. / 16oz.)" },
+    { name: "Chai Latte", price: "$6.00", description: "Black Scottie Chai, Steamed Milk" },
+    { name: "Matcha Latte", price: "$6.00", description: "Ceremonial Grade Matcha, Milk, Maple Syrup, Vanilla, Salt" },
+    { name: "Hot Chocolate", price: "$4.00", description: "Chocolate Syrup, Steamed Milk (12oz.)" },
+    { name: "Kid's Hot Chocolate or Steamer", price: "$3.00", description: "Chocolate or Flavor of Choice, Steamed Milk (8oz.)" },
   ],
-  specialty: [
-    { name: "Salted Caramel Smores Latte", price: "$6.50", description: "Espresso, chocolate, toasted marshmallow, salted caramel drizzle" },
-    { name: "Maple Vanilla Latte", price: "$6.00", description: "Real maple syrup, vanilla bean, espresso, steamed milk" },
-    { name: "Stroopie Latte", price: "$6.50", description: "Caramel waffle cookie flavor, cinnamon, whipped cream" },
+  flavors: [
+    { name: "Vanilla", price: "", description: "" },
+    { name: "Caramel", price: "", description: "" },
+    { name: "Mocha", price: "", description: "" },
+    { name: "Maple", price: "", description: "" },
+    { name: "Whipped Honey + Cinnamon", price: "", description: "" },
+    { name: "See Instagram for Seasonal Flavors", price: "", description: "@tiffscoffeebar" },
   ],
 };
 
@@ -42,48 +52,57 @@ export const testimonials = [
 ];
 
 export const galleryImages = [
-  { src: heroImage, alt: "Cafe atmosphere" },
-  { src: coffeeLatte, alt: "Latte art" },
-  { src: cafeInterior, alt: "Interior design" },
-  { src: pastries, alt: "Fresh pastries", span: true },
-  { src: profile, alt: "Customer enjoying coffee" },
+  { src: gallery1, alt: "Tiff's Coffee Bar" },
+  { src: gallery2, alt: "Tiff's Coffee Bar" },
+  { src: gallery3, alt: "Tiff's Coffee Bar" },
+  { src: gallery4, alt: "Tiff's Coffee Bar", span: true },
+  { src: gallery5, alt: "Tiff's Coffee Bar" },
+  { src: gallery6, alt: "Tiff's Coffee Bar" },
 ];
 
+// January - March 2026 Schedule at Lititz Library
+// Wednesdays 4-8pm, Thursdays 9-2pm
+// Unavailable: January 31, February 17-24, March 7
 export const schedule = [
-  {
-    date: new Date(2025, 10, 20), // Nov 20, 2025
-    location: "Lititz Public Library",
-    time: "08:00 - 16:00",
-    status: "active",
-  },
-  {
-    date: new Date(2025, 10, 21), // Nov 21, 2025
-    location: "Lititz Public Library",
-    time: "09:00 - 17:00",
-    status: "upcoming",
-  },
-  {
-    date: new Date(2025, 10, 22), // Nov 22, 2025
-    location: "Lititz Public Library",
-    time: "08:00 - 16:00",
-    status: "upcoming",
-  },
-  {
-    date: new Date(2025, 10, 23), // Nov 23, 2025
-    location: "Lititz Public Library",
-    time: "08:00 - 16:00",
-    status: "upcoming",
-  },
-  {
-    date: new Date(2025, 10, 24), // Nov 24, 2025
-    location: "Private Event",
-    time: "10:00 - 14:00",
-    status: "upcoming",
-  },
-  {
-    date: new Date(2025, 11, 15), // Dec 15, 2025
-    location: "Lititz Library",
-    time: "10:00 - 14:00",
-    status: "upcoming",
-  },
+  // January 2026 - Wednesdays
+  { date: new Date(2026, 0, 7), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 0, 14), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 0, 21), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 0, 28), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  // January 2026 - Thursdays
+  { date: new Date(2026, 0, 8), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 0, 15), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 0, 22), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 0, 29), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  // January 31 - Unavailable for events
+  { date: new Date(2026, 0, 31), location: "Unavailable for Events", time: "", status: "unavailable" },
+  // February 2026 - Wednesdays
+  { date: new Date(2026, 1, 4), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 1, 11), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 1, 25), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  // February 2026 - Thursdays
+  { date: new Date(2026, 1, 5), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 1, 12), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 1, 26), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  // February 17-24 - Unavailable for events
+  { date: new Date(2026, 1, 17), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 18), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 19), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 20), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 21), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 22), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 23), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 1, 24), location: "Unavailable for Events", time: "", status: "unavailable" },
+  // March 2026 - Wednesdays
+  { date: new Date(2026, 2, 4), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 2, 11), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 2, 18), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 2, 25), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  // March 2026 - Thursdays
+  { date: new Date(2026, 2, 5), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 2, 12), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 2, 19), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 2, 26), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  // March 7 - Unavailable for events
+  { date: new Date(2026, 2, 7), location: "Unavailable for Events", time: "", status: "unavailable" },
 ];
