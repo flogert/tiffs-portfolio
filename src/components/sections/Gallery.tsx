@@ -2,7 +2,6 @@ import { useState, useRef, TouchEvent } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { galleryImages } from "@/data/content";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +39,7 @@ export const Gallery = () => {
     <section id="gallery" className="py-10 md:py-24 bg-warm-beige">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection animation="fade-up">
-          <h2 className="text-3xl md:text-5xl font-cozy font-bold text-primary text-center mb-8 md:mb-12 tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-primary text-center mb-8 md:mb-12 tracking-wide">
             Our Space
           </h2>
         </AnimatedSection>
@@ -60,7 +59,7 @@ export const Gallery = () => {
                     src={galleryImages[currentIndex].src}
                     alt={galleryImages[currentIndex].alt}
                     loading="lazy"
-                    className="w-full h-[300px] sm:h-[400px] object-cover"
+                    className="w-full h-[250px] sm:h-[320px] object-contain bg-warm-beige"
                   />
                 </div>
               </DialogTrigger>
@@ -73,22 +72,6 @@ export const Gallery = () => {
                 />
               </DialogContent>
             </Dialog>
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white active:scale-95 p-2.5 rounded-full shadow-lg transition-all"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="w-5 h-5 text-primary" />
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white active:scale-95 p-2.5 rounded-full shadow-lg transition-all"
-              aria-label="Next image"
-            >
-              <ChevronRight className="w-5 h-5 text-primary" />
-            </button>
           </div>
 
           {/* Dots Indicator */}

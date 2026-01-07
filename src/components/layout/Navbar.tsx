@@ -156,12 +156,12 @@ export const Navbar = () => {
           >
             <img
               src={tiffsLogo}
-              alt="Tiff's Coffee Bar - Best Coffee in Lititz Lancaster County PA"
-              className={`w-auto rounded-lg transition-all duration-500 ease-in-out ${
-                scrolled ? "h-14 md:h-20" : "h-20 md:h-28"
-              } ${scrolled ? "" : "invert"}`}
+              alt="Tiff's Coffee Bar - Quality Coffee and Real-life Connection"
+              className={`w-auto h-16 sm:h-20 md:h-24 rounded-lg transition-all duration-500 ease-in-out ${
+                scrolled ? "" : "invert"
+              }`}
             />
-            <h1 className={`text-sm sm:text-lg md:text-[1.72rem] font-serif font-bold transition-all duration-500 ease-in-out ${
+            <h1 className={`text-base sm:text-lg md:text-2xl font-serif font-semibold tracking-wide transition-colors duration-500 ease-in-out ${
               scrolled ? "text-primary" : "text-white"
             }`}>
               Tiff's Coffee Bar

@@ -3,10 +3,26 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar } from "@/components/ui/calendar";
 import { schedule } from "@/data/content";
-import { CalendarDays, Clock, MapPin } from "lucide-react";
+import { CalendarDays, Clock, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Schedule = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  const [currentMonth, setCurrentMonth] = useState(new Date());
+
+  // Navigate to previous month
+  const prevMonth = () => {
+    setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
+  };
+
+  // Navigate to next month
+  const nextMonth = () => {
+    setCurrentMonth(prev => new Date(prev.getFullYear(), prev.getMonth() + 1, 1));
+  };
+
+  // Format month for display
+  const formatMonth = (date: Date) => {
+    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  };
 
   // Find schedule item for selected date
   const selectedSchedule = schedule.find(
@@ -17,15 +33,14 @@ export const Schedule = () => {
       item.date.getFullYear() === date.getFullYear()
   );
 
-  // Get upcoming schedule items (next 10)
+  // Get schedule items for current month including unavailable
   const upcomingSchedule = useMemo(() => {
-    const now = new Date();
-    now.setHours(0, 0, 0, 0);
+    const startOfMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1);
+    const endOfMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 0);
     return schedule
-      .filter(item => item.date >= now && item.status !== "unavailable")
-      .sort((a, b) => a.date.getTime() - b.date.getTime())
-      .slice(0, 10);
-  }, []);
+      .filter(item => item.date >= startOfMonth && item.date <= endOfMonth)
+      .sort((a, b) => a.date.getTime() - b.date.getTime());
+  }, [currentMonth]);
 
   // Format date for display
   const formatDate = (date: Date) => {
@@ -94,29 +109,55 @@ export const Schedule = () => {
           <AnimatedSection animation="fade-up">
             <Card className="border-none shadow-lg bg-background/90 backdrop-blur-sm">
               <CardContent className="p-4">
-                <h3 className="font-semibold text-primary mb-4 flex items-center gap-2">
-                  <CalendarDays className="w-5 h-5" />
-                  Upcoming Schedule
-                </h3>
+                {/* Month Navigation */}
+                <div className="flex items-center justify-between mb-4">
+                  <button
+                    onClick={prevMonth}
+                    className="p-2 rounded-full hover:bg-warm-beige active:scale-95 transition-all"
+                    aria-label="Previous month"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-primary" />
+                  </button>
+                  <h3 className="font-semibold text-primary text-lg">
+                    {formatMonth(currentMonth)}
+                  </h3>
+                  <button
+                    onClick={nextMonth}
+                    className="p-2 rounded-full hover:bg-warm-beige active:scale-95 transition-all"
+                    aria-label="Next month"
+                  >
+                    <ChevronRight className="w-5 h-5 text-primary" />
+                  </button>
+                </div>
                 <div className="space-y-3">
                   {upcomingSchedule.map((item, index) => (
                     <div 
                       key={index} 
-                      className="flex items-center justify-between p-3 bg-warm-beige/50 rounded-xl"
+                      className={`flex items-center justify-between p-3 rounded-xl ${
+                        item.status === "unavailable" 
+                          ? "bg-red-50 border border-red-200" 
+                          : "bg-warm-beige/50"
+                      }`}
                     >
                       <div className="flex-1">
-                        <p className="font-medium text-primary text-sm">
+                        <p className={`font-medium text-sm ${
+                          item.status === "unavailable" ? "text-red-600" : "text-primary"
+                        }`}>
                           {formatDate(item.date)}
                         </p>
                         <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
-                          <span className="flex items-center gap-1">
+                          <span className={`flex items-center gap-1 ${
+                            item.status === "unavailable" ? "text-red-500" : ""
+                          }`}>
                             <MapPin className="w-3 h-3" />
                             {item.location}
                           </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            {item.time}
-                          </span>
+                          {item.time && (
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              {item.time}
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>
