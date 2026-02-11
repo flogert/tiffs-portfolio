@@ -100,7 +100,7 @@ export const Schedule = () => {
             <h2 className="text-3xl md:text-5xl font-cozy font-bold text-primary mb-2 md:mb-4 tracking-wide">
               Schedule & Event Bookings
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base">Find us at Lititz Library</p>
+            <p className="text-muted-foreground text-sm md:text-base italic mt-1">Bringing the coffee to you!</p>
           </div>
         </AnimatedSection>
 

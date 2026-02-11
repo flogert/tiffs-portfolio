@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { AnimatedText } from "@/components/AnimatedText";
+
 import { Tabs, TabsContent } from "@/components/ui/tabs";
-import { Coffee } from "lucide-react";
+
 import { menuItems } from "@/data/content";
 import { motion } from "framer-motion";
 
@@ -36,17 +36,7 @@ export const Menu = () => {
       <div className="container mx-auto px-6 relative z-10">
         <AnimatedSection animation="fade-up" delay={300}>
           <div className="flex flex-col items-center justify-center mb-12">
-            <div className="flex items-center gap-4">
-              <h2 className="text-5xl font-cozy font-bold text-coffee drop-shadow-sm tracking-wide">Menu</h2>
-              <div className="relative mt-1">
-                <Coffee className="text-coffee fill-cream/50 drop-shadow-md" size={40} strokeWidth={2} />
-              </div>
-            </div>
-            <AnimatedText 
-              text="Handcrafted with love" 
-              className="text-lg font-cozy text-muted-foreground mt-2 italic"
-              delay={500}
-            />
+            <h2 className="text-5xl font-cozy font-bold text-coffee drop-shadow-sm tracking-wide">Menu</h2>
           </div>
         </AnimatedSection>
 

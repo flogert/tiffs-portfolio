@@ -1,10 +1,14 @@
 import heroImage from "@/assets/hero-cafe.jpg";
-import gallery1 from "@/assets/gallery-1.png";
-import gallery2 from "@/assets/gallery-2.png";
-import gallery3 from "@/assets/gallery-3.png";
-import gallery4 from "@/assets/gallery-4.png";
-import gallery5 from "@/assets/gallery-5.png";
-import gallery6 from "@/assets/gallery-6.png";
+import gallery1 from "@/assets/gallery-new-1.jpeg";
+import gallery2 from "@/assets/gallery-new-2.jpeg";
+import gallery3 from "@/assets/gallery-new-3.jpeg";
+import gallery4 from "@/assets/gallery-new-4.jpeg";
+import gallery5 from "@/assets/gallery-new-5.jpeg";
+import gallery6 from "@/assets/gallery-new-6.jpeg";
+import gallery7 from "@/assets/gallery-new-7.jpeg";
+import gallery8 from "@/assets/gallery-new-8.jpeg";
+import gallery9 from "@/assets/gallery-new-9.jpeg";
+import gallery10 from "@/assets/gallery-new-10.jpeg";
 import profile from "@/assets/profile.jpg";
 
 export const menuItems = {
@@ -58,6 +62,10 @@ export const galleryImages = [
   { src: gallery4, alt: "Tiff's Coffee Bar", span: true },
   { src: gallery5, alt: "Tiff's Coffee Bar" },
   { src: gallery6, alt: "Tiff's Coffee Bar" },
+  { src: gallery7, alt: "Tiff's Coffee Bar" },
+  { src: gallery8, alt: "Tiff's Coffee Bar", span: true },
+  { src: gallery9, alt: "Tiff's Coffee Bar" },
+  { src: gallery10, alt: "Tiff's Coffee Bar" },
 ];
 
 // January - March 2026 Schedule at Lititz Library

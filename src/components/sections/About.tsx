@@ -29,14 +29,9 @@ export const About = () => {
               el="h2"
               className="text-4xl md:text-5xl font-cozy font-bold text-primary mb-6 tracking-wide"
             />
-            <AnimatedSection animation="blur-in" delay={400}>
-              <p className="text-xl text-muted-foreground italic mb-8">
-                "The magic of coffee isn't just in the bean, but in the conversations it inspires."
-              </p>
-            </AnimatedSection>
-            <AnimatedSection animation="fade-up" delay={600}>
+            <AnimatedSection animation="fade-up" delay={400}>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I'm passionate about creating a warm, welcoming space where friends can catch up, ideas can brew, and community connections can flourish. My journey with coffee started with a simple love for the craft, but it grew into a desire to serve more than just a great cup. Every latte, cappuccino, and espresso is poured with love and a genuine wish to brighten your day.
+                Hi! My name is Tiffani, and I own and operate Tiff's Coffee Bar. I am dedicated to serving thoughtfully crafted coffee drinks and proudly feature espresso from Whiffs, a local coffee company. I operate mostly in and around Lancaster, Pennsylvania and have traveled up to 45 miles for private events. Through a simple booking process, my hope in bringing Tiff's Coffee Bar to your upcoming event is that you and your guests will experience the warmth of hospitality and feel encouraged to connect with each other in a meaningful way over a cup of quality coffee. I'm honored by your support, and it truly is my pleasure to serve you!
               </p>
             </AnimatedSection>
             <AnimatedSection animation="scale-in" delay={800}>
@@ -45,7 +40,7 @@ export const About = () => {
                 onClick={() => scrollToSection("contact")}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105 transition-transform animate-pulse-glow"
               >
-                Get in Touch
+                Contact Us
               </Button>
             </AnimatedSection>
           </AnimatedSection>

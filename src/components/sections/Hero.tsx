@@ -1,7 +1,6 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedText } from "@/components/AnimatedText";
 import heroImage from "@/assets/hero-cafe.jpg";
-import { ArrowLeft } from "lucide-react";
 
 export const Hero = () => {
   const handleMenuClick = () => {
@@ -20,6 +19,8 @@ export const Hero = () => {
         src={heroImage}
         alt=""
         aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover"
       />
       
@@ -45,7 +46,7 @@ export const Hero = () => {
         </AnimatedSection>
         <div className="min-h-[3rem]">
           <AnimatedText
-            text="Where quality coffee meets genuine connection"
+            text="where quality coffee meets genuine connection"
             className="text-lg md:text-2xl text-cream/90 font-light italic"
             delay={300}
           />
