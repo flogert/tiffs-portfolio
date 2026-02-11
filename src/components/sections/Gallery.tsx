@@ -57,12 +57,12 @@ export const Gallery = () => {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <div className="overflow-hidden rounded-2xl shadow-xl">
+            <div className="overflow-hidden rounded-2xl shadow-xl bg-warm-beige">
               <img
                 src={galleryImages[currentIndex].src}
                 alt={galleryImages[currentIndex].alt}
                 loading="lazy"
-                className="w-full h-[300px] sm:h-[380px] object-cover transition-opacity duration-300"
+                className="w-full h-[300px] sm:h-[380px] object-contain transition-opacity duration-300"
               />
             </div>
 
