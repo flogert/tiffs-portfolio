@@ -9,6 +9,7 @@ import gallery7 from "@/assets/gallery-new-7.jpeg";
 import gallery8 from "@/assets/gallery-new-8.jpeg";
 import gallery9 from "@/assets/gallery-new-9.jpeg";
 import gallery10 from "@/assets/gallery-new-10.jpeg";
+import gallery11 from "@/assets/gallery-new-11.jpeg";
 import profile from "@/assets/profile.jpg";
 
 export const menuItems = {
@@ -59,13 +60,14 @@ export const galleryImages = [
   { src: gallery1, alt: "Tiff's Coffee Bar" },
   { src: gallery2, alt: "Tiff's Coffee Bar" },
   { src: gallery3, alt: "Tiff's Coffee Bar" },
-  { src: gallery4, alt: "Tiff's Coffee Bar", span: true },
+  { src: gallery4, alt: "Tiff's Coffee Bar" },
   { src: gallery5, alt: "Tiff's Coffee Bar" },
   { src: gallery6, alt: "Tiff's Coffee Bar" },
   { src: gallery7, alt: "Tiff's Coffee Bar" },
-  { src: gallery8, alt: "Tiff's Coffee Bar", span: true },
-  { src: gallery9, alt: "Tiff's Coffee Bar" },
+  { src: gallery8, alt: "Tiff's Coffee Bar" },
   { src: gallery10, alt: "Tiff's Coffee Bar" },
+  { src: gallery9, alt: "Tiff's Coffee Bar" },
+  { src: gallery11, alt: "Tiff's Coffee Bar" },
 ];
 
 // January - March 2026 Schedule at Lititz Library

@@ -100,19 +100,19 @@ export const Gallery = () => {
           </div>
         </div>
 
-        {/* Desktop Grid - Professional Masonry */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-3 max-w-6xl mx-auto">
+        {/* Desktop Grid - Cozy Masonry Layout */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-3 max-w-5xl mx-auto grid-flow-dense">
           {galleryImages.map((image, index) => {
-            // Create a visually interesting grid layout
-            const isWide = index === 0 || index === 5;
-            const isTall = index === 2 || index === 7;
-            
+            // 11 images → 4 wide (col-span-2) + 7 standard = 15 cells = 5 perfect rows
+            const wideIndices = new Set([0, 3, 5, 8]);
+            const isWide = wideIndices.has(index);
+
             return (
               <AnimatedSection
                 key={index}
                 animation="scale-in"
-                delay={index * 80}
-                className={`${isWide ? "lg:col-span-2" : ""} ${isTall ? "lg:row-span-2" : ""}`}
+                delay={index * 70}
+                className={isWide ? "col-span-2" : ""}
               >
                 <button
                   onClick={() => openLightbox(index)}
@@ -122,11 +122,9 @@ export const Gallery = () => {
                     src={image.src}
                     alt={image.alt}
                     loading="lazy"
-                    className={`w-full object-cover transition-all duration-700 group-hover:scale-110 ${
-                      isTall ? "h-[580px]" : isWide ? "h-[280px]" : "h-[280px]"
-                    }`}
+                    className="w-full h-[280px] object-cover transition-all duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </button>
               </AnimatedSection>
             );
