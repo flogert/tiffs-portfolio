@@ -73,8 +73,8 @@ export const Menu = () => {
                     role="tab"
                     aria-selected={activeTab === "drinks"}
                     onClick={() => setActiveTab("drinks")}
-                    className={`font-serif text-lg py-2 rounded-lg transition-colors duration-300 ${
-                      activeTab === "drinks" ? "text-cream" : "text-coffee hover:bg-coffee/10"
+                    className={`font-cozy text-xl md:text-2xl font-bold tracking-wide py-2 rounded-lg transition-colors duration-300 ${
+                      activeTab === "drinks" ? "text-cream drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]" : "text-coffee/90 hover:text-coffee hover:bg-coffee/10"
                     }`}
                   >
                     Drinks
@@ -83,8 +83,8 @@ export const Menu = () => {
                     role="tab"
                     aria-selected={activeTab === "flavors"}
                     onClick={() => setActiveTab("flavors")}
-                    className={`font-serif text-lg py-2 rounded-lg transition-colors duration-300 ${
-                      activeTab === "flavors" ? "text-coffee" : "text-coffee hover:bg-gold/10"
+                    className={`font-cozy text-xl md:text-2xl font-bold tracking-wide py-2 rounded-lg transition-colors duration-300 ${
+                      activeTab === "flavors" ? "text-coffee drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]" : "text-coffee/90 hover:text-coffee hover:bg-gold/10"
                     }`}
                   >
                     Flavors

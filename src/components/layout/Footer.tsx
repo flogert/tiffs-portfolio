@@ -56,9 +56,20 @@ export const Footer = () => {
         </AnimatedSection>
 
         <AnimatedSection animation="fade-left" delay={400}>
-          <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} Tiff's Coffee Bar.
-          </p>
+          <div className="text-sm text-primary-foreground/80 text-center md:text-right space-y-1">
+            <p>© {new Date().getFullYear()} Tiff's Coffee Bar.</p>
+            <p>
+              Made with love by{" "}
+              <a
+                href="https://flogertbardhi.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-gold/80 transition-colors font-medium"
+              >
+                Flogert Bardhi
+              </a>
+            </p>
+          </div>
         </AnimatedSection>
       </div>
     </footer>

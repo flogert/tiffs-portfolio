@@ -70,9 +70,9 @@ export const galleryImages = [
   { src: gallery11, alt: "Tiff's Coffee Bar" },
 ];
 
-// January - March 2026 Schedule at Lititz Library
+// January - May 2026 Schedule at Lititz Library
 // Wednesdays 4-8pm, Thursdays 9-2pm
-// Unavailable: January 31, February 17-24, March 7
+// Unavailable: January 31, February 17-24, March 7, May 2, May 15, May 22
 export const schedule = [
   // January 2026 - Wednesdays
   { date: new Date(2026, 0, 7), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
@@ -115,4 +115,20 @@ export const schedule = [
   { date: new Date(2026, 2, 26), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
   // March 7 - Unavailable for events
   { date: new Date(2026, 2, 7), location: "Unavailable for Events", time: "", status: "unavailable" },
+  // April 2026 - Wednesdays
+  { date: new Date(2026, 3, 1), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 8), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 15), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 22), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 29), location: "Lititz Library", time: "4:00pm - 8:00pm", status: "upcoming" },
+  // April 2026 - Thursdays
+  { date: new Date(2026, 3, 2), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 9), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 16), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 23), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  { date: new Date(2026, 3, 30), location: "Lititz Library", time: "9:00am - 2:00pm", status: "upcoming" },
+  // May 2026 - Unavailable for events
+  { date: new Date(2026, 4, 2), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 4, 15), location: "Unavailable for Events", time: "", status: "unavailable" },
+  { date: new Date(2026, 4, 22), location: "Unavailable for Events", time: "", status: "unavailable" },
 ];

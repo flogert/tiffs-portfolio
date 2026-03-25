@@ -44,7 +44,7 @@ export const Gallery = () => {
     <section id="gallery" className="py-10 md:py-24 bg-warm-beige">
       <div className="container mx-auto px-4 md:px-6">
         <AnimatedSection animation="fade-up">
-          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-primary text-center mb-8 md:mb-12 tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-cozy font-bold text-primary text-center mb-8 md:mb-12 tracking-wide">
             Gallery
           </h2>
         </AnimatedSection>
@@ -57,14 +57,18 @@ export const Gallery = () => {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <div className="overflow-hidden rounded-2xl shadow-xl bg-warm-beige">
+            <button
+              onClick={() => openLightbox(currentIndex)}
+              className="w-full overflow-hidden rounded-[2rem] shadow-xl border border-primary/10 bg-white/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
+              aria-label="View image fullscreen"
+            >
               <img
                 src={galleryImages[currentIndex].src}
                 alt={galleryImages[currentIndex].alt}
                 loading="lazy"
-                className="w-full h-[300px] sm:h-[380px] object-contain transition-opacity duration-300"
+                className="w-full h-[300px] sm:h-[380px] object-cover transition-opacity duration-300"
               />
-            </div>
+            </button>
 
             {/* Navigation Arrows */}
             <button 
@@ -116,13 +120,13 @@ export const Gallery = () => {
               >
                 <button
                   onClick={() => openLightbox(index)}
-                  className="overflow-hidden rounded-xl cursor-pointer group relative w-full block focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
+                  className="overflow-hidden rounded-3xl cursor-pointer group relative w-full block border border-primary/10 bg-white/80 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 shadow-md"
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
                     loading="lazy"
-                    className="w-full h-[280px] object-cover transition-all duration-700 group-hover:scale-105"
+                    className="w-full h-[280px] object-cover transition-all duration-700 group-hover:scale-[1.04]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </button>
@@ -133,7 +137,7 @@ export const Gallery = () => {
 
         {/* Lightbox Dialog */}
         <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-          <DialogContent className="max-w-5xl bg-black/95 border-none shadow-none p-2 sm:p-4">
+          <DialogContent className="max-w-5xl bg-slate-100/95 border border-slate-300 shadow-2xl p-2 sm:p-4 rounded-xl [&>button]:h-12 [&>button]:w-12 [&>button_svg]:h-6 [&>button_svg]:w-6 [&>button]:right-2 [&>button]:top-2">
             <div className="relative">
               <img
                 src={galleryImages[lightboxIndex]?.src}
@@ -142,17 +146,17 @@ export const Gallery = () => {
               />
               <button
                 onClick={() => setLightboxIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-colors"
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/10 hover:bg-slate-900/20 backdrop-blur-sm rounded-full p-3 transition-colors"
                 aria-label="Previous image"
               >
-                <ChevronLeft className="w-6 h-6 text-white" />
+                <ChevronLeft className="w-6 h-6 text-primary" />
               </button>
               <button
                 onClick={() => setLightboxIndex((prev) => (prev + 1) % galleryImages.length)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 transition-colors"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/10 hover:bg-slate-900/20 backdrop-blur-sm rounded-full p-3 transition-colors"
                 aria-label="Next image"
               >
-                <ChevronRight className="w-6 h-6 text-white" />
+                <ChevronRight className="w-6 h-6 text-primary" />
               </button>
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {galleryImages.map((_, i) => (
@@ -160,7 +164,7 @@ export const Gallery = () => {
                     key={i}
                     onClick={() => setLightboxIndex(i)}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      i === lightboxIndex ? "bg-white w-5" : "bg-white/40"
+                      i === lightboxIndex ? "bg-primary w-5" : "bg-primary/30"
                     }`}
                     aria-label={`View image ${i + 1}`}
                   />

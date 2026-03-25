@@ -133,8 +133,8 @@ export const Navbar = () => {
           <div className="min-[845px]:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={scrolled ? "text-primary" : "text-white"}>
-                  <Menu size={28} />
+                <Button variant="ghost" size="icon" className={`${scrolled ? "text-primary" : "text-white"} h-14 w-14 [&_svg]:size-auto`}>
+                  <Menu size={24} />
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[280px] sm:w-[350px] bg-background/95 backdrop-blur-xl">
@@ -152,16 +152,16 @@ export const Navbar = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex items-center gap-2 min-[845px]:gap-3 absolute left-1/2 -translate-x-1/2 min-[845px]:static min-[845px]:translate-x-0"
+              className="flex items-center gap-1 min-[845px]:gap-1 absolute left-1/2 -translate-x-1/2 min-[845px]:static min-[845px]:translate-x-0 min-[845px]:-ml-4"
           >
             <img
               src={tiffsLogo}
               alt="Tiff's Coffee Bar - Quality Coffee and Real-life Connection"
-              className={`w-auto h-16 sm:h-20 md:h-24 rounded-lg transition-all duration-500 ease-in-out ${
+              className={`w-auto h-24 sm:h-28 md:h-28 rounded-lg transition-all duration-500 ease-in-out ${
                 scrolled ? "" : "invert"
               }`}
             />
-            <h1 className={`text-base sm:text-lg md:text-2xl font-serif font-semibold tracking-wide transition-colors duration-500 ease-in-out ${
+            <h1 className={`text-xl sm:text-2xl md:text-2xl font-serif font-semibold tracking-wide transition-colors duration-500 ease-in-out ${
               scrolled ? "text-primary" : "text-white"
             }`}>
               Tiff's Coffee Bar

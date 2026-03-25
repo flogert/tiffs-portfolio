@@ -21,7 +21,7 @@ export const Hero = () => {
         aria-hidden="true"
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center scale-100 md:scale-100"
       />
       
       {/* Interactive Menu Highlight */}
@@ -38,7 +38,7 @@ export const Hero = () => {
       </div>
 
       <div className="absolute inset-0 bg-coffee/60" />
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-[105px] md:mt-24">
         <AnimatedSection animation="blur-in" delay={0}>
           <h1 className="text-4xl md:text-7xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-cream via-gold to-cream bg-[length:200%_auto] animate-text-shimmer mb-6">
             TIFF'S COFFEE BAR
